@@ -76,14 +76,47 @@
          }
         //Heatin Up Section:
         //Write a method to check if an integer(from the user) is in the range -10 to 10
+        public static void NegativeToPositiveTen()
+        {
+            int number = 0;
+            bool isNumber;
 
+            do
+            {
+                Console.WriteLine("Enter your number:");
+                var response = Console.ReadLine();
+                isNumber = int.TryParse(response, out number);
+            } while (isNumber == false);
+
+            if (number <= 10 && number >= -10)
+                Console.WriteLine("The number is within the range of -10 to 10.");
+            else
+                Console.WriteLine("The number is out of range.");
+        }
         //Write a method to display the multiplication table(from 1 to 12) of a given integer
+        public static void MultiplicationTable()
+        {
+            int number = 0;
+            bool isNumber;
 
+            do
+            {
+                Console.WriteLine("Enter your number:");
+                var response = Console.ReadLine();
+                isNumber = int.TryParse(response, out number);
+            } while (isNumber == false);
+            Console.WriteLine();
+            for(int i = 1; i < 12; i++)
+            {
+                Console.WriteLine($"{number} * {i} = {(number * i)}");
+            }
+        }
 
-        //Call the methods to test them in the Main method below
-        static void Main(string[] args)
-        {   
-            
+            //Call the methods to test them in the Main method below
+            static void Main(string[] args)
+        { 
+            // Uncomment code beneath 'Method #' to run
+
             /*---------------------
               LukeWarm Section
             ----------------------*/
@@ -123,6 +156,12 @@
             /*------------------------
               Heatin' Up Section
             --------------------------*/
+
+            //Method 1
+            //NegativeToPositiveTen();
+
+            //Method 2
+            //MultiplicationTable();
         }
     }
 }
